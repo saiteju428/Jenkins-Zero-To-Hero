@@ -1,11 +1,12 @@
 pipeline {
-    agent any
-    stages {
-        stage('Test') {
-            steps {
-                // Use 'bat' for Windows commands
-                bat 'node --version'
-            }
-        }
+  agent {
+    any
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'node --version'
+      }
     }
+  }
 }
